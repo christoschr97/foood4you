@@ -18,4 +18,5 @@ export const mockImages = [
   "https://www.foodiesfeed.com/wp-content/uploads/2019/04/mae-mu-pancakes-600x750.jpg",
   "https://www.foodiesfeed.com/wp-content/uploads/2019/02/messy-pizza-on-a-black-table-600x400.jpg",
   "https://www.foodiesfeed.com/wp-content/uploads/2019/02/pizza-ready-for-baking-600x400.jpg",
+  "https://media.istockphoto.com/photos/fresh-tasty-burger-picture-id807031028?b=1&k=20&m=807031028&s=170667a&w=0&h=t-I_Hrd2TMrsHMyV88gz9HN_JsbhFX3LEbNDEntza3w=",
 ];
