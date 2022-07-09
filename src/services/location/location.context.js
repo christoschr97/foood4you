@@ -15,7 +15,7 @@ export const LocationContextProvider = ({ children }) => {
     setKeyword(searchKeyword);
     console.log(searchKeyword);
     if (!searchKeyword.length) {
-      // don't do anything
+      // don't do anything if we dont have anything
       return;
     }
     locationRequest(searchKeyword.toLowerCase())
