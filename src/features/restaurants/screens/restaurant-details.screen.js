@@ -3,7 +3,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { List } from "react-native-paper";
 
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
-import { SafeArea } from "../components/utility/safe-area.component";
+import { SafeArea } from "../../../components/utility/safe-area.component";
 
 export const RestaurantDetailsScreen = ({ route }) => {
   const [breakfastExpanded, setBreakfastExpanded] = useState(false);
@@ -11,7 +11,6 @@ export const RestaurantDetailsScreen = ({ route }) => {
   const [dinnerExpanded, setDinnerExpanded] = useState(false);
   const [drinksExpanded, setDrinksExpanded] = useState(false);
   const { restaurant } = route.params;
-  console.log(route.params);
   return (
     <SafeArea>
       <RestaurantInfoCard restaurant={restaurant} />
