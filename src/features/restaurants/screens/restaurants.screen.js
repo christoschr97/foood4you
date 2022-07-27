@@ -34,7 +34,7 @@ export const RestaurantsScreen = ({ navigation }) => {
   const { favourites } = useContext(FavouritesContext);
   const [isToggled, setIsToggled] = useState(false);
 
-  console.log(favourites);
+  // console.log(favourites);
   const contentContainerStyling = { paddding: 16 };
   return (
     <SafeArea>
