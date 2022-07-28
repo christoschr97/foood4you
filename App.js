@@ -11,23 +11,7 @@ import { RestaurantsContextProvider } from "./src/services/restaurants/restauran
 import { LocationContextProvider } from "./src/services/location/location.context";
 import { FavouritesContextProvider } from "./src/services/favourites/favourites.context";
 import { Navigator } from "./src/infrastructure/navigation/index";
-import { getApps, initializeApp } from "firebase/app";
 import { AuthenticationContextProvider } from "./src/services/authentication/authentication.context";
-
-// // Initialize Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyATSo7cEh1LZ0Vs4bt3aEO-U90x8VZxkng",
-  authDomain: "map-to-meal.firebaseapp.com",
-  projectId: "map-to-meal",
-  storageBucket: "map-to-meal.appspot.com",
-  messagingSenderId: "568610497735",
-  appId: "1:568610497735:web:a08e89f7ff148596778ae2",
-  measurementId: "G-68N7ZJRPDM",
-};
-
-if (!getApps().length) {
-  initializeApp(firebaseConfig);
-}
 
 export default function App() {
   const [oswaldLoaded] = useOswald({
