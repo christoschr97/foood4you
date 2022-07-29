@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import { loginRequest } from "./authentication.service";
+import { loginRequest, registerRequest } from "./authentication.service";
 import { auth } from "./config";
 
 export const AuthenticationContext = createContext();
@@ -22,6 +22,23 @@ export const AuthenticationContextProvider = ({ children }) => {
       });
   };
 
+  const onRegister = (email, password, repeatedPassword) => {
+    if (password !== repeatedPassword) {
+      setError("Error: Passwords do not match");
+      return;
+    }
+    setIsLoading(true);
+    registerRequest(auth, email, password)
+      .then((u) => {
+        setUser(u);
+        setIsLoading(false);
+      })
+      .catch((e) => {
+        setIsLoading(false);
+        setError(e.code.toString());
+      });
+  };
+
   return (
     <AuthenticationContext.Provider
       value={{
@@ -30,6 +47,7 @@ export const AuthenticationContextProvider = ({ children }) => {
         isLoading,
         error,
         onLogin,
+        onRegister,
       }}
     >
       {children}
